@@ -94,9 +94,10 @@ async def run_agent() -> list[dict]:
         permission_mode="acceptEdits",
     )
 
+    full_prompt = f"{SYSTEM_PROMPT}\n\n{USER_PROMPT}"
+
     async for message in query(
-        prompt=USER_PROMPT,
-        system_prompt=SYSTEM_PROMPT,
+        prompt=full_prompt,
         options=options,
     ):
         # Collect any text output from the agent
