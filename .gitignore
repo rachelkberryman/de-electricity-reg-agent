@@ -1,0 +1,5 @@
+config.json
+.seen_changes.json
+__pycache__/
+*.pyc
+.env
